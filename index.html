@@ -794,6 +794,127 @@
             font-family: 'Courier New', monospace;
         }
 
+        /* Rental Car Card */
+        .rental-car-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 520px;
+            margin: 25px auto 0;
+        }
+        .rc-header {
+            background: linear-gradient(135deg, #d31145 0%, #a00d35 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rc-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .rc-logo-box {
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.65rem;
+            color: #d31145;
+            letter-spacing: 1px;
+            font-family: Arial, sans-serif;
+        }
+        .rc-brand-name {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .rc-type-badge {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .rc-body {
+            padding: 20px;
+            background: #fff;
+        }
+        .rc-renter-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .rc-renter-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .rc-confirmation {
+            text-align: right;
+        }
+        .rc-conf-label {
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .rc-conf-code {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            color: #d31145;
+        }
+        .rc-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .rc-detail-block {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 12px 15px;
+        }
+        .rc-detail-label {
+            font-size: 0.65rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .rc-detail-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        .rc-detail-sub {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 2px;
+        }
+        .rc-footer {
+            padding: 12px 20px;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px dashed #ddd;
+        }
+        .rc-car-icon {
+            font-size: 1.3rem;
+        }
+
         /* Quick Stats */
         .quick-stats {
             display: grid;
@@ -1140,6 +1261,48 @@
                         </div>
                         <div class="bp-ticket-number">Ticket: 5262116547979</div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Avis Rental Car -->
+            <div class="rental-car-card">
+                <div class="rc-header">
+                    <div class="rc-logo">
+                        <div class="rc-logo-box">
+                            <svg width="32" height="18" viewBox="0 0 32 18" fill="none">
+                                <text x="0" y="14" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#d31145">AVIS</text>
+                            </svg>
+                        </div>
+                        <span class="rc-brand-name">Avis Rent A Car</span>
+                    </div>
+                    <span class="rc-type-badge">Rental Car</span>
+                </div>
+                <div class="rc-body">
+                    <div class="rc-renter-row">
+                        <div>
+                            <div class="rc-renter-name">SARAH FLOURNOY</div>
+                        </div>
+                        <div class="rc-confirmation">
+                            <div class="rc-conf-label">Confirmation</div>
+                            <div class="rc-conf-code">02264298US1</div>
+                        </div>
+                    </div>
+                    <div class="rc-details-grid">
+                        <div class="rc-detail-block">
+                            <div class="rc-detail-label">Pickup</div>
+                            <div class="rc-detail-value">Portland, ME (PWM)</div>
+                            <div class="rc-detail-sub">Thu, September 17</div>
+                        </div>
+                        <div class="rc-detail-block">
+                            <div class="rc-detail-label">Return</div>
+                            <div class="rc-detail-value">Portland, ME (PWM)</div>
+                            <div class="rc-detail-sub">Mon, September 21</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rc-footer">
+                    <span class="rc-car-icon">🚗</span>
+                    <div class="bp-ticket-number">Confirmation: 02264298US1</div>
                 </div>
             </div>
         </div>
