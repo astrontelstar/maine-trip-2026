@@ -525,6 +525,275 @@
             border-radius: 6px;
         }
 
+        /* Boarding Pass Tickets */
+        .tickets-section {
+            margin-bottom: 30px;
+        }
+        .tickets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 25px;
+        }
+        .boarding-pass {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .boarding-pass::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: #1a1a2e;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        .boarding-pass::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: #1a1a2e;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        .bp-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bp-header.united {
+            background: linear-gradient(135deg, #0033a0 0%, #002366 100%);
+        }
+        .bp-header.southwest {
+            background: linear-gradient(135deg, #304cb2 0%, #1a2d6d 100%);
+        }
+        .bp-airline-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .bp-logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.7rem;
+        }
+        .bp-logo-circle.united {
+            color: #0033a0;
+        }
+        .bp-logo-circle.southwest {
+            color: #304cb2;
+        }
+        .bp-airline-name {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .bp-class {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .bp-body {
+            padding: 20px;
+            background: #fff;
+        }
+        .bp-passenger-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .bp-passenger-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .bp-confirmation {
+            text-align: right;
+        }
+        .bp-conf-label {
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .bp-conf-code {
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+        .bp-conf-code.united {
+            color: #0033a0;
+        }
+        .bp-conf-code.southwest {
+            color: #304cb2;
+        }
+        .bp-flight-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .bp-flight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .bp-flight-date {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 0.9rem;
+        }
+        .bp-flight-direction {
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .bp-flight-direction.outbound {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .bp-flight-direction.return {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        .bp-route {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .bp-airport {
+            text-align: center;
+        }
+        .bp-airport-code {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .bp-airport-city {
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .bp-airport-time {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 4px;
+        }
+        .bp-flight-path {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .bp-plane-icon {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        .bp-duration {
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .bp-path-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #ddd 0%, #888 50%, #ddd 100%);
+            position: relative;
+            margin: 8px 0;
+        }
+        .bp-path-line::before,
+        .bp-path-line::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: -3px;
+        }
+        .bp-path-line::before {
+            left: 0;
+            background: #333;
+        }
+        .bp-path-line::after {
+            right: 0;
+            background: #333;
+        }
+        .bp-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+        .bp-detail {
+            text-align: center;
+        }
+        .bp-detail-label {
+            color: #888;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .bp-detail-value {
+            color: #1a1a2e;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        .bp-layover {
+            text-align: center;
+            padding: 8px;
+            background: #fff3cd;
+            border-radius: 8px;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #856404;
+        }
+        .bp-footer {
+            padding: 12px 20px;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px dashed #ddd;
+        }
+        .bp-barcode {
+            display: flex;
+            gap: 2px;
+            align-items: flex-end;
+        }
+        .bp-barcode-bar {
+            width: 3px;
+            background: #1a1a2e;
+            border-radius: 1px;
+        }
+        .bp-ticket-number {
+            font-size: 0.7rem;
+            color: #888;
+            font-family: 'Courier New', monospace;
+        }
+
         /* Quick Stats */
         .quick-stats {
             display: grid;
@@ -557,6 +826,34 @@
             .activity-grid {
                 grid-template-columns: 1fr;
             }
+            .tickets-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 520px) {
+            .tickets-grid {
+                grid-template-columns: 1fr;
+            }
+            .bp-airport-code {
+                font-size: 1.5rem;
+            }
+            .bp-route {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .bp-flight-path {
+                width: 100%;
+                flex-direction: row;
+                padding: 10px 0;
+            }
+            .bp-path-line {
+                width: 60px;
+                margin: 0 10px;
+            }
+            .bp-details {
+                grid-template-columns: repeat(3, 1fr);
+                font-size: 0.7rem;
+            }
         }
         @media (max-width: 600px) {
             .calendar-grid {
@@ -587,6 +884,263 @@
             <div class="legend-item">
                 <div class="legend-color joanna"></div>
                 <span>Joanna (Daughter) — Eugene</span>
+            </div>
+        </div>
+
+        <!-- Boarding Pass Tickets -->
+        <div class="section tickets-section">
+            <div class="section-header">
+                <span class="section-icon">🎫</span>
+                <h2 class="section-title">Your Boarding Passes</h2>
+            </div>
+
+            <div class="tickets-grid">
+                <!-- Joanna's Ticket - United -->
+                <div class="boarding-pass">
+                    <div class="bp-header united">
+                        <div class="bp-airline-logo">
+                            <div class="bp-logo-circle united">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#0033a0" stroke-width="2"/>
+                                    <path d="M6 12h12M12 6v12" stroke="#0033a0" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <span class="bp-airline-name">United Airlines</span>
+                        </div>
+                        <span class="bp-class">Economy</span>
+                    </div>
+                    <div class="bp-body">
+                        <div class="bp-passenger-row">
+                            <div>
+                                <div class="bp-passenger-name">JOANNA FLOURNOY</div>
+                            </div>
+                            <div class="bp-confirmation">
+                                <div class="bp-conf-label">Confirmation</div>
+                                <div class="bp-conf-code united">K1QB61</div>
+                            </div>
+                        </div>
+
+                        <!-- Outbound Flight -->
+                        <div class="bp-flight-card">
+                            <div class="bp-flight-header">
+                                <span class="bp-flight-date">Thu, September 17, 2026</span>
+                                <span class="bp-flight-direction outbound">OUTBOUND</span>
+                            </div>
+                            <div class="bp-route">
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">EUG</div>
+                                    <div class="bp-airport-city">Eugene, OR</div>
+                                    <div class="bp-airport-time">5:00 AM</div>
+                                </div>
+                                <div class="bp-flight-path">
+                                    <div class="bp-plane-icon">✈️</div>
+                                    <div class="bp-path-line"></div>
+                                    <div class="bp-duration">7h 49m</div>
+                                </div>
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">PWM</div>
+                                    <div class="bp-airport-city">Portland, ME</div>
+                                    <div class="bp-airport-time">3:49 PM</div>
+                                </div>
+                            </div>
+                            <div class="bp-details">
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 1</div>
+                                    <div class="bp-detail-value">UA 1241</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 2</div>
+                                    <div class="bp-detail-value">UA 372</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Aircraft</div>
+                                    <div class="bp-detail-value">737-800</div>
+                                </div>
+                            </div>
+                            <div class="bp-layover">⏱️ 1h 13m layover in Denver (DEN)</div>
+                        </div>
+
+                        <!-- Return Flight -->
+                        <div class="bp-flight-card">
+                            <div class="bp-flight-header">
+                                <span class="bp-flight-date">Mon, September 21, 2026</span>
+                                <span class="bp-flight-direction return">RETURN</span>
+                            </div>
+                            <div class="bp-route">
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">PWM</div>
+                                    <div class="bp-airport-city">Portland, ME</div>
+                                    <div class="bp-airport-time">3:35 PM</div>
+                                </div>
+                                <div class="bp-flight-path">
+                                    <div class="bp-plane-icon">✈️</div>
+                                    <div class="bp-path-line"></div>
+                                    <div class="bp-duration">9h 3m</div>
+                                </div>
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">EUG</div>
+                                    <div class="bp-airport-city">Eugene, OR</div>
+                                    <div class="bp-airport-time">9:38 PM</div>
+                                </div>
+                            </div>
+                            <div class="bp-details">
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 1</div>
+                                    <div class="bp-detail-value">UA 287</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 2</div>
+                                    <div class="bp-detail-value">UA 1303</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Aircraft</div>
+                                    <div class="bp-detail-value">737-800</div>
+                                </div>
+                            </div>
+                            <div class="bp-layover">⏱️ 1h 25m layover in Denver (DEN)</div>
+                        </div>
+                    </div>
+                    <div class="bp-footer">
+                        <div class="bp-barcode">
+                            <div class="bp-barcode-bar" style="height:20px"></div>
+                            <div class="bp-barcode-bar" style="height:25px"></div>
+                            <div class="bp-barcode-bar" style="height:15px"></div>
+                            <div class="bp-barcode-bar" style="height:30px"></div>
+                            <div class="bp-barcode-bar" style="height:20px"></div>
+                            <div class="bp-barcode-bar" style="height:25px"></div>
+                            <div class="bp-barcode-bar" style="height:18px"></div>
+                            <div class="bp-barcode-bar" style="height:28px"></div>
+                            <div class="bp-barcode-bar" style="height:22px"></div>
+                            <div class="bp-barcode-bar" style="height:15px"></div>
+                            <div class="bp-barcode-bar" style="height:30px"></div>
+                            <div class="bp-barcode-bar" style="height:20px"></div>
+                        </div>
+                        <div class="bp-ticket-number">Fare: Economy Fully Refundable</div>
+                    </div>
+                </div>
+
+                <!-- Sarah's Ticket - Southwest -->
+                <div class="boarding-pass">
+                    <div class="bp-header southwest">
+                        <div class="bp-airline-logo">
+                            <div class="bp-logo-circle southwest">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15 8H21L16 12L18 19L12 15L6 19L8 12L3 8H9L12 2Z" fill="#304cb2"/>
+                                </svg>
+                            </div>
+                            <span class="bp-airline-name">Southwest Airlines</span>
+                        </div>
+                        <span class="bp-class">Basic</span>
+                    </div>
+                    <div class="bp-body">
+                        <div class="bp-passenger-row">
+                            <div>
+                                <div class="bp-passenger-name">SARAH FLOURNOY</div>
+                            </div>
+                            <div class="bp-confirmation">
+                                <div class="bp-conf-label">Confirmation</div>
+                                <div class="bp-conf-code southwest">CQQL4Y</div>
+                            </div>
+                        </div>
+
+                        <!-- Outbound Flight -->
+                        <div class="bp-flight-card">
+                            <div class="bp-flight-header">
+                                <span class="bp-flight-date">Thu, September 17, 2026</span>
+                                <span class="bp-flight-direction outbound">OUTBOUND</span>
+                            </div>
+                            <div class="bp-route">
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">DAL</div>
+                                    <div class="bp-airport-city">Dallas, TX</div>
+                                    <div class="bp-airport-time">4:15 PM</div>
+                                </div>
+                                <div class="bp-flight-path">
+                                    <div class="bp-plane-icon">✈️</div>
+                                    <div class="bp-path-line"></div>
+                                    <div class="bp-duration">5h 10m</div>
+                                </div>
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">PWM</div>
+                                    <div class="bp-airport-city">Portland, ME</div>
+                                    <div class="bp-airport-time">10:25 PM</div>
+                                </div>
+                            </div>
+                            <div class="bp-details">
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 1</div>
+                                    <div class="bp-detail-value">WN 0949</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 2</div>
+                                    <div class="bp-detail-value">WN 1467</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Seats</div>
+                                    <div class="bp-detail-value">14C, 15D</div>
+                                </div>
+                            </div>
+                            <div class="bp-layover">⏱️ 40m layover in Baltimore (BWI)</div>
+                        </div>
+
+                        <!-- Return Flight -->
+                        <div class="bp-flight-card">
+                            <div class="bp-flight-header">
+                                <span class="bp-flight-date">Mon, September 21, 2026</span>
+                                <span class="bp-flight-direction return">RETURN</span>
+                            </div>
+                            <div class="bp-route">
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">PWM</div>
+                                    <div class="bp-airport-city">Portland, ME</div>
+                                    <div class="bp-airport-time">2:10 PM</div>
+                                </div>
+                                <div class="bp-flight-path">
+                                    <div class="bp-plane-icon">✈️</div>
+                                    <div class="bp-path-line"></div>
+                                    <div class="bp-duration">5h 20m</div>
+                                </div>
+                                <div class="bp-airport">
+                                    <div class="bp-airport-code">DAL</div>
+                                    <div class="bp-airport-city">Dallas, TX</div>
+                                    <div class="bp-airport-time">6:30 PM</div>
+                                </div>
+                            </div>
+                            <div class="bp-details">
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 1</div>
+                                    <div class="bp-detail-value">WN 3334</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Flight 2</div>
+                                    <div class="bp-detail-value">WN 0488</div>
+                                </div>
+                                <div class="bp-detail">
+                                    <div class="bp-detail-label">Seats</div>
+                                    <div class="bp-detail-value">TBD, 15C</div>
+                                </div>
+                            </div>
+                            <div class="bp-layover">⏱️ 40m layover in Nashville (BNA)</div>
+                        </div>
+                    </div>
+                    <div class="bp-footer">
+                        <div class="bp-barcode">
+                            <div class="bp-barcode-bar" style="height:22px"></div>
+                            <div class="bp-barcode-bar" style="height:28px"></div>
+                            <div class="bp-barcode-bar" style="height:18px"></div>
+                            <div class="bp-barcode-bar" style="height:25px"></div>
+                            <div class="bp-barcode-bar" style="height:30px"></div>
+                            <div class="bp-barcode-bar" style="height:15px"></div>
+                            <div class="bp-barcode-bar" style="height:22px"></div>
+                            <div class="bp-barcode-bar" style="height:28px"></div>
+                            <div class="bp-barcode-bar" style="height:20px"></div>
+                            <div class="bp-barcode-bar" style="height:25px"></div>
+                            <div class="bp-barcode-bar" style="height:18px"></div>
+                            <div class="bp-barcode-bar" style="height:30px"></div>
+                        </div>
+                        <div class="bp-ticket-number">Ticket: 5262116547979</div>
+                    </div>
+                </div>
             </div>
         </div>
 
